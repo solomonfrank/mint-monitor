@@ -1,10 +1,11 @@
 import React from "react";
+import Header from "../Components/Header";
 import "../css/style.css";
 
 const PageLayout = (props) => {
   return (
     <>
-      <header>header</header>
+      <Header />
       <aside>sidebar</aside>
       <main>{props.children}</main>
     </>
