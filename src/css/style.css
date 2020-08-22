@@ -18,7 +18,7 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 260px auto;
-  grid-template-rows: 5% 95%;
+  grid-template-rows: 8% 92%;
   grid-template-areas:
     "header header"
     "sidebar main ";
@@ -36,9 +36,181 @@ header {
   padding: 0;
   border: 0;
   z-index: 9999;
-  background-color: white;
 }
 
 main {
   grid-area: main;
+}
+
+.header-wrapper {
+  display: flex;
+  height: 100%;
+}
+.navbar {
+  background-color: #fff;
+  display: block;
+  height: 100%;
+  margin-bottom: 0;
+  padding: 0;
+  width: 80%;
+}
+.logo {
+  align-items: center;
+  float: left;
+  width: 20%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 99;
+  border: none;
+}
+.logo-title {
+  text-align: center;
+}
+.logo-title a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  color: #1875f0;
+}
+a {
+  text-decoration: none;
+}
+
+.logo-title a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+  color: #1875f0;
+}
+.navbar-left {
+  float: left;
+  position: relative;
+}
+.navbar-right {
+  float: right;
+  padding-left: 0;
+  position: relative;
+}
+ul {
+  list-style-type: none;
+}
+.navbar-right li {
+  float: left;
+  padding: 0 45px;
+}
+
+.navbar-right li a {
+  text-align: center;
+  font-family: Segoe UI;
+  font-size: 17px;
+  line-height: 19px;
+  color: #647787;
+}
+.navbar-right li:last-child {
+  margin-top: -10px;
+}
+
+.user-img {
+  float: right;
+}
+.user-icon {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+.user {
+  display: flex;
+}
+.user-tag {
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.user-detail {
+  margin-right: 15px;
+}
+.user-name {
+  padding: 0;
+  margin-top: 0;
+}
+
+.search-wrap {
+  cursor: text;
+  display: inline-flex;
+  position: relative;
+  font-size: 1rem;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.1876em;
+  letter-spacing: 0.00938em;
+  margin-left: 10px;
+  border-bottom: 2px solid #bdbdbd;
+}
+.search-wrap-header {
+  cursor: text;
+  display: inline-flex;
+  position: relative;
+  font-size: 1rem;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.1876em;
+  letter-spacing: 0.00938em;
+  margin-left: 10px;
+  font-size: 17px;
+}
+.search-icon {
+  margin-right: 8px;
+}
+.search-input {
+  font: inherit;
+  color: currentColor;
+  width: 100%;
+  border: 0;
+  height: 1.1876em;
+  margin: 0;
+  display: block;
+  padding: 6px 0 7px;
+  min-width: 0;
+  background: none;
+  box-sizing: content-box;
+  animation-name: mui-auto-fill-cancel;
+  letter-spacing: inherit;
+  animation-duration: 10ms;
+}
+.search-input:focus {
+  outline: none;
+}
+.fa-bell-o {
+  font-size: 19px;
+}
+.notif {
+  top: 0;
+
+  transform: scale(1) translate(50%, -50%);
+  transform-origin: 100% 0%;
+  color: #fff;
+  background-color: #1875f0;
+  height: 20px;
+  display: flex;
+  padding: 0 6px;
+  z-index: 1;
+  position: absolute;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  min-width: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 10px;
 }
