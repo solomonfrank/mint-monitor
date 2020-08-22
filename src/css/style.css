@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  color: #72777a;
+  background: #e5e5e5;
+  overflow: hidden;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 260px auto;
+  grid-template-rows: 5% 95%;
+  grid-template-areas:
+    "header header"
+    "sidebar main ";
+  height: 100vh;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: white;
+}
+
+header {
+  grid-area: header;
+  box-shadow: 0px 4px 10px rgba(79, 79, 79, 0.07);
+  padding: 0;
+  border: 0;
+  z-index: 9999;
+  background-color: white;
+}
+
+main {
+  grid-area: main;
+}
