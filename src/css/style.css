@@ -273,3 +273,35 @@ a {
 .hide-menu {
   margin-left: 10px;
 }
+
+.container {
+  margin: 20px;
+}
+
+.card-wrap {
+  display: flex;
+  margin-bottom: 20px;
+}
+.transact-card {
+  background-color: #fff;
+  width: 30%;
+  margin-right: 5px;
+  display: flex;
+  padding: 15px 15px 5px 15px;
+}
+.card-cont {
+  width: 65%;
+}
+.card-graph {
+  width: 35%;
+}
+.card-cont p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #72777a;
+}
+.card-cont p:last-child {
+  font-weight: bold;
+  color: black;
+}
