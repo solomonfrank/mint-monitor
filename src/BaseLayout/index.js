@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "../Components/Header";
+import Sidebar from "../Components/Sidebar";
 import "../css/style.css";
 
 const PageLayout = (props) => {
   return (
     <>
       <Header />
-      <aside>sidebar</aside>
+      <Sidebar />
       <main>{props.children}</main>
     </>
   );

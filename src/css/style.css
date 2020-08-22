@@ -1,9 +1,12 @@
 * {
   box-sizing: border-box;
 }
+html {
+  overflow: auto;
+}
 body {
   line-height: 1.5;
-  color: #72777a;
+
   background: #e5e5e5;
   overflow: hidden;
   font-family: sans-serif;
@@ -103,6 +106,9 @@ ul {
 .navbar-right li {
   float: left;
   padding: 0 45px;
+}
+a {
+  color: #647787;
 }
 
 .navbar-right li a {
@@ -213,4 +219,57 @@ ul {
   box-sizing: border-box;
   align-items: center;
   border-radius: 10px;
+}
+
+.btn {
+  text-align: center;
+  position: absolute;
+  color: white;
+  outline: none;
+  border: none;
+  background: #27ae60;
+  border-radius: 30px;
+  padding: 10px;
+  width: 163px;
+  height: 33px;
+  left: 32px;
+  top: 93px;
+}
+.sidebar-list {
+  width: 100%;
+  height: 466px;
+  left: 1px;
+  top: 158px;
+  margin-top: 100px;
+}
+.list-title {
+  margin-left: 40px;
+  margin-bottom: 5px;
+}
+
+.sidebar-list ul,
+.sidebar-list ul li {
+  padding: 0;
+  margin: 0;
+}
+.sidebar-list ul li a {
+  padding: 10px 35px;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  line-height: 25px;
+}
+
+.sidebar-list ul li:hover {
+  padding: 0px;
+  border-left: 5px solid#1875f0;
+  background-color: rgb(41, 98, 255, 0.1);
+  color: #72777a;
+}
+
+.sidebar-list ul li:hover:a {
+  color: white;
+}
+.hide-menu {
+  margin-left: 10px;
 }
