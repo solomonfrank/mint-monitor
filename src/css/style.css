@@ -13,6 +13,7 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  color: #72777a;
 }
 
 #root {
@@ -304,4 +305,83 @@ a {
 .card-cont p:last-child {
   font-weight: bold;
   color: black;
+}
+.transact-history {
+  display: flex;
+  background-color: rgb(227, 227, 227);
+}
+.full-graph {
+  width: 70%;
+  float: left;
+  margin-right: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.summary {
+  width: 30%;
+
+  background-color: rgb(227, 227, 227);
+}
+
+.order-summary {
+  background-color: #fff;
+  padding: 20px;
+}
+.order-summary:first-child {
+  margin-bottom: 5px;
+}
+
+.payment-type {
+  margin: 0;
+  font-weight: bold;
+}
+.order-summary p {
+  margin-top: 0;
+}
+.btn-page {
+  float: right;
+  padding: 10px;
+}
+
+.page-detail {
+  float: left;
+}
+
+.btn-next {
+  outline: none;
+  border: none;
+  padding: 10px;
+  border: 1px solid #d9d9d9;
+  background-color: #f0f1f5;
+}
+.btn-next.active {
+  background-color: rgb(24, 117, 240);
+  color: white;
+  border-left: none;
+  border-right: none;
+}
+.graph-direct {
+  display: flex;
+  justify-content: space-between;
+}
+.graph-direct p {
+  padding: 10px;
+  font-weight: bold;
+}
+.graph-control {
+  padding: 20px;
+}
+.graph-control button {
+  margin-right: 10px;
+}
+.pending {
+  color: gold;
+}
+.success {
+  color: green;
+}
+.total {
+  color: blue;
 }
