@@ -580,7 +580,7 @@ item-type {
   margin-bottom: 4px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 990px) {
   #root {
     grid-template-columns: 260px auto;
     grid-template-rows: 5% 95%;
@@ -593,7 +593,7 @@ item-type {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 990px) {
   #root {
     grid-template-rows: 5% 95%;
     grid-template-columns: 100%;
