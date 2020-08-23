@@ -44,6 +44,13 @@ const HomePage = () => {
             </div>
           </div>
           <div className="spark">
+            <div class="vert">
+              <div className="v1">Jan</div>
+              <div className="v1">Jan</div>
+              <div className="v1">Jan</div>
+              <div className="v1">Jan</div>
+              <div className="v1">Jan</div>
+            </div>
             <Chart />
           </div>
         </div>
@@ -94,7 +101,7 @@ const HomePage = () => {
               <input
                 type="text"
                 className="search-input"
-                placeholder="search"
+                placeholder="search payment"
               />
             </div>
           </div>

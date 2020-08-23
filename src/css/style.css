@@ -591,6 +591,19 @@ item-type {
   .icon {
     display: none;
   }
+  .vert {
+    width: 50%;
+    display: flex;
+    position: absolute;
+    top: 260px;
+    text-align: center;
+  }
+  .v1 {
+    width: 30%;
+    border-right: 1px solid rgb(194, 212, 234);
+    height: 300px;
+    font-weight: bold;
+  }
 }
 
 @media only screen and (max-width: 990px) {
@@ -671,6 +684,19 @@ item-type {
   }
   .table-container {
     overflow-x: auto;
+  }
+  .vert {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 760px;
+    text-align: center;
+  }
+  .v1 {
+    width: 30%;
+    border-right: 1px solid rgb(194, 212, 234);
+    height: 150px;
+    font-weight: bold;
   }
 }
 .sidebar.open {
