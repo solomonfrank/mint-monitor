@@ -2,10 +2,28 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const toggleSideBar = () => {
+    const asideNode = document.querySelector(".sidebar");
+
+    if (asideNode.classList.contains("open")) {
+      asideNode.classList.remove("open");
+    } else {
+      asideNode.classList.add("open");
+    }
+  };
   return (
     <header>
       <div className="header-wrapper">
         <div class="logo">
+          <ul class="icon" onClick={toggleSideBar}>
+            <li class="burger-list">
+              <div id="burger">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </div>
+            </li>
+          </ul>
           <h3 className="logo-title">
             {" "}
             <Link to="/">TransMonitor</Link>

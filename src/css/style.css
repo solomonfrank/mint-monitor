@@ -21,11 +21,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 260px auto;
-  grid-template-rows: 5% 95%;
-  grid-template-areas:
-    "header header"
-    "sidebar main ";
 }
 
 aside {
@@ -585,4 +580,108 @@ item-type {
   min-width: 0;
   margin-top: 4px;
   margin-bottom: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  #root {
+    grid-template-columns: 260px auto;
+    grid-template-rows: 5% 95%;
+    grid-template-areas:
+      "header header"
+      "sidebar main ";
+  }
+  .icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #root {
+    grid-template-rows: 5% 95%;
+    grid-template-areas:
+      "header"
+      "main";
+  }
+  header {
+    grid-area: header;
+    width: 100%;
+    position: fixed;
+  }
+
+  main {
+    grid-area: main;
+  }
+  aside {
+    display: none;
+  }
+  .navbar {
+    display: none;
+  }
+  .logo {
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+  .logo-title {
+    margin-left: 50px;
+  }
+  .icon {
+    margin-right: 10px;
+    padding-left: 10px;
+  }
+
+  span.icon-bar {
+    background-color: gray;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .container {
+    margin: 5px;
+  }
+  .card-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+  .transact-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .card-cont {
+    width: 60%;
+  }
+  .card-graph {
+    width: 40%;
+  }
+  .transact-history {
+    flex-direction: column;
+  }
+  .full-graph {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .summary {
+    width: 100%;
+  }
+  .order-summary {
+    width: 100%;
+  }
+}
+.sidebar.open {
+  display: block;
+  width: 260px;
+  height: 100%;
+  z-index: 900000;
+  position: fixed;
+  top: 60px;
+  transition: 0.2s ease-in;
+}
+.sidebar.open > .sidebar-list {
+  margin-top: 150px;
+}
+.sidebar.open > button {
+  margin-top: 0 !important;
 }
