@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <aside>
+    <aside className="sidebar">
       <button className="btn btn-blue">GENERATE INVOICE</button>
       <div className="sidebar-list">
         <div>
