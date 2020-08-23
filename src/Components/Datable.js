@@ -111,63 +111,65 @@ export default function DataTable() {
   } = useTable({ columns, data });
 
   return (
-    <table
-      className=""
-      {...getTableProps()}
-      style={{
-        width: "100%",
-        borderCollapse: "collapse",
-      }}
-    >
-      <thead>
-        {headerGroups.map((headerGroup) => (
-          <tr
-            {...headerGroup.getHeaderGroupProps()}
-            style={{ borderBottom: "none" }}
-          >
-            {headerGroup.headers.map((column) => {
-              return (
-                <th
-                  {...column.getHeaderProps()}
-                  className="tbl-td"
-                  style={{
-                    background: "#F0F1F5",
-                    color: "#bdbdbd",
-                    fontWeight: "bold",
-                    textAlign: "left",
-                    paddingTop: "15px",
-                    paddingBottom: "15px",
-                  }}
-                >
-                  {column.render("Header")}
-                </th>
-              );
-            })}
-          </tr>
-        ))}
-      </thead>
-      <tbody {...getTableBodyProps()}>
-        {rows.map((row) => {
-          prepareRow(row);
-          return (
-            <tr {...row.getRowProps()}>
-              {row.cells.map((cell) => {
+    <div className="table-container">
+      <table
+        className=""
+        {...getTableProps()}
+        style={{
+          width: "100%",
+          borderCollapse: "collapse",
+        }}
+      >
+        <thead>
+          {headerGroups.map((headerGroup) => (
+            <tr
+              {...headerGroup.getHeaderGroupProps()}
+              style={{ borderBottom: "none" }}
+            >
+              {headerGroup.headers.map((column) => {
                 return (
-                  <td
-                    {...cell.getCellProps()}
+                  <th
+                    {...column.getHeaderProps()}
+                    className="tbl-td"
                     style={{
-                      borderBottom: "1px solid #E5E5E5",
-                      background: "white",
+                      background: "#F0F1F5",
+                      color: "#bdbdbd",
+                      fontWeight: "bold",
+                      textAlign: "left",
+                      paddingTop: "15px",
+                      paddingBottom: "15px",
                     }}
                   >
-                    {cellValue(cell)}
-                  </td>
+                    {column.render("Header")}
+                  </th>
                 );
               })}
             </tr>
-          );
-        })}
-      </tbody>
-    </table>
+          ))}
+        </thead>
+        <tbody {...getTableBodyProps()}>
+          {rows.map((row) => {
+            prepareRow(row);
+            return (
+              <tr {...row.getRowProps()}>
+                {row.cells.map((cell) => {
+                  return (
+                    <td
+                      {...cell.getCellProps()}
+                      style={{
+                        borderBottom: "1px solid #E5E5E5",
+                        background: "white",
+                      }}
+                    >
+                      {cellValue(cell)}
+                    </td>
+                  );
+                })}
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
